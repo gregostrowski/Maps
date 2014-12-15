@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+       <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-min.js"></script>
+	  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA3QloJMGZInhIFwH_QX6GRec9PkJYyo-k&amp;sensor=false"></script>
+
+	  <style>
+		.left { float: left; }
+		.right {float: right; }
+		#map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		}
+		.map-holder {
+			height: 500px;
+			width: 800px;
+		}
+	  </style>
+
+   </head>
+   <body>
+   <div class="row">
+		<div class='left'>
+			<label>Location:</label>
+			<input class="submit" type="text" placeholder="zip/address" style="width: 300px;"/>
+			<button class="searchGeocode"> geocode </button>
+			<label><input type="checkbox" class="fitToMap" /> Fit Points on Map</label>
+			<br />
+			<ul class='geoResults'>
+			
+			</ul>
+		</div>
+	</div>
+	<div style="clear: both;"></div>
+	<div class="row map-holder" >
+		<div id="map-canvas" ></div>
+	</div>
+	
+
+    <script src="Map.js"></script>
+
+   </body>
+</html>
